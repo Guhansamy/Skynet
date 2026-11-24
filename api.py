@@ -3,12 +3,13 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from pydantic_ai import Agent
 from shared.llm import get_model
+from shared.prompts import load_prompt
 
 app = FastAPI(title="Skynet")
 
 agent = Agent(
     get_model(),
-    system_prompt="You are a helpful assistant. Use tools when needed. Be short.",
+    system_prompt=load_prompt("orchestrator"),
 )
 
 @agent.tool_plain

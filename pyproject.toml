@@ -10,7 +10,11 @@ requires-python = ">=3.14"
 dependencies = [
     "fastapi>=0.165.0",
     "httpx>=0.28.1",
+    "langchain-ollama>=1.2.0",
+    "langgraph>=1.2.24",
+    "playwright>=1.65.2",
     "pydantic-ai>=2.73.0",
+    "pyyaml>=6.0.4",
     "uvicorn>=0.54.0",
 ]
 
