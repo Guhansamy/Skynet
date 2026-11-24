@@ -1,0 +1,22 @@
+[project]
+name = "skynet"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Guhan K", email = "guhan5936@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.165.0",
+    "httpx>=0.28.1",
+    "pydantic-ai>=2.73.0",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+skynet = "skynet:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"
